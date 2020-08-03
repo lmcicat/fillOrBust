@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+	<form action="" method="post">
+		<input type="submit" name="newGame" value="New Game">
+	</form>
+	<!-- <p>Logged in as {{ username }}\n <a href="/accounts/logout/">Logout</a></p> -->
+	<!-- {% for post in posts %}
+	<div class="post">
+		<p>
+			<a href="/u/{{ post.owner }}/">
+				<img class = "profPic" src="{{ url_for('uploads', filename=post.owner_img_filename )}}" alt="profile picture">
+			</a>
+			<a href="/u/{{ post.owner }}/"><b>{{ post.owner }}</b></a>
+			<a href="/p/{{ post.postid }}/">
+				<span class="rightSide">{{ post.created }}</span>
+			</a>
+		</p>
+
+		<a href="/p/{{ post.postid }}/">
+		<img class = "postPic" src="{{ url_for('uploads', filename=post.filename) }}" alt="post picture">
+		</a>
+		<p>
+			{{ post.likes }}
+			{% if post.likes == 1 %}
+			 like
+			{% else %}
+			 likes
+			{% endif %}
+		</p>
+		{% if post.has_liked %}
+		<form action="" method="post" enctype="multipart/form-data">
+  		<input type="hidden" name="postid" value="{{ post.postid }}"/>
+  		<input type="submit" name="unlike" value="unlike"/>
+		</form>
+		{% else %}
+		 <form action="" method="post" enctype="multipart/form-data">
+  			<input type="hidden" name="postid" value="{{ post.postid }}"/>
+  			<input type="submit" name="like" value="like"/>
+ 		</form>
+		{% endif %}
+
+		{% for comment in post.comments %}
+			<p><a href="/u/{{ comment.owner }}/"><b>{{ comment.owner }}</b></a> {{ comment.text }}</p>
+		{% endfor %}
+
+		<form action="" method="post" enctype="multipart/form-data">
+	  	<input type="hidden" name="postid" value="{{ post.postid }}"/>
+	  	<input type="text" name="text"/>
+	  	<input type="submit" name="comment" value="comment"/>
+		</form>
+
+	</div>
+	{% endfor %} -->
+{% endblock %}

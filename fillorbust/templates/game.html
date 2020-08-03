@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+    <form action="" method="post">
+        <select name="playerlist" id="playerlist">
+        {% for player in players %}
+            <option value="{{player.name}}">{{player.name}}</option>
+        {% endfor %}
+        </select>
+        <input type="number" name="points" placeholder="Point Adjustment">
+        <input type="submit" name="submit" value="Submit"/>
+    </form>
+    
+    <table border="1">
+        <tr>
+            <th>Player Name</th>
+            <th>Score</th>
+        </tr>
+        {% for player in players %}
+            <tr>
+                <td>{{player.name}}</td>
+                <td>{{player.score}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    
+        
+{% endblock %}

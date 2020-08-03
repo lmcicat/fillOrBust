@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# insta485run
+#
+# Clean, build and start server
+
+
+# Stop on errors, print commands
+# See https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
+set -Eeuo pipefail
+set -x
+
+#Check style
+pycodestyle insta485
+
+pydocstyle insta485
+
+pylint --reports=n --disable=cyclic-import --disable=no-member --disable=no-value-for-parameter insta485
+
+pytest -v tests
+
+#Check generated HTML code
+./bin/insta485test-html

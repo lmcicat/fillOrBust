@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block head %}
+  {% endblock %}
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+	<title>fillorbust</title>
+</head>
+<body>
+	<div>
+		<a class="fillorbustlogo" href="/"><img src="/static/images/fob.png" alt="Fill or Bust Logo" width="100"></a>
+		 |
+		<span><b>Fill or Bust</b></span>
+	</div>
+  <div class="content">
+    {% block content %}{% endblock %}
+  </div>
+  <div class="footer">
+    {% block footer %}{% endblock %}
+  </div>
+  </body>
+  </html>
