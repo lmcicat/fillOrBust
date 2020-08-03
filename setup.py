@@ -7,9 +7,9 @@ Lisa Cicatello <lmcicat@umich.edu>
 from setuptools import setup
 
 setup(
-    name='fillOrBust',
+    name='fillorbust',
     version='0.1.0',
-    packages=['fillOrBust'],
+    packages=['fillorbust'],
     include_package_data=True,
     install_requires=[
         'arrow==0.15.8',
