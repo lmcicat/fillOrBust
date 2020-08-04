@@ -22,5 +22,6 @@ setup(
         'pytest==5.1.2',
         'requests==2.22.0',
         'sh==1.12.14',
+        'gunicorn'
     ],
 )
