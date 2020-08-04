@@ -1,1 +1,1 @@
-web: gunicorn main:views/index
+web: gunicorn fillorbust:app
